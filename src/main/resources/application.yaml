@@ -1,0 +1,21 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/my_savvy_database
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  profiles:
+    active: dev
+
+# Firebase Configuration
+firebase:
+  config:
+    path: firebase/firebase-service-account.json
